@@ -2,51 +2,39 @@ import React from 'react';
 
 const FirstBaggage = () => {
     return (
-      <div className='w-full'>
+      <div className='w-full mt-6'>
           <div className="overflow-x-auto">
             <table className="table" >
                
                 <thead className="bg-[#23e8b6] text-white">
                     <tr>
-                        <th>Pax Type</th>
-                        <th>Base Fare(BDT) </th>
-                        <th>Tax(BDT)</th>
-                        <th>Total(BDT)</th>
-                        <th>Pax Count</th>
-                        <th>Service Fee(BDT)</th>
-                        <th>Sub Total (BDT)</th>
+                        <th>Baggage</th>
+                        <th>Check-In</th>
+                        <th>Cabin</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
                     {/* row 1 */}
                     <tr className="bg-[#23e8b76b]">
-                        <td>Adult x1</td>
-                        <td>4090 TK</td>
-                        <td>275 TK</td>
-                        <td>4815 TK</td>
-                        <td>1</td>
-                        <td>0 BDT</td>
-                        <td>4815 TK</td>
+                        <td>Adult</td>
+                        <td>20 KG</td>
+                        <td>M</td>
+                
                     </tr>
                     {/* row 2 */}
                     <tr>
-                        <td>Child x1</td>
-                        <td>4090 TK</td>
-                        <td>275 TK</td>
-                        <td>4815 TK</td>
-                        <td>1</td>
-                        <td>0 BDT</td>
-                        <td>4815 TK</td>
+                        <td>Child</td>
+                        <td>20 KG</td>
+                        <td>M</td>
+                        
                     </tr>
                     {/* row 3 */}
                     <tr className="bg-[#23e8b76b]">
-                        <td>Infant x1</td>
-                        <td>4090 TK</td>
-                        <td>275 TK</td>
-                        <td>4815 TK</td>
-                        <td>1</td>
-                        <td>0 BDT</td>
-                        <td>4815 TK</td>
+                        <td>Infant</td>
+                        <td>20 KG</td>
+                        <td>M</td>
+                    
                     </tr>
                 </tbody>
             </table>

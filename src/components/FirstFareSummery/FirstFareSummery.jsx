@@ -2,7 +2,7 @@ import React from 'react';
 
 const FirstFireSummery = () => {
     return (
-      <div className='w-full'>
+      <div className='w-full mt-6'>
           <div className="overflow-x-auto">
             <table className="table" >
                

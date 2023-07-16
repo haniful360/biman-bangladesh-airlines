@@ -3,6 +3,7 @@ import './FirstFlight.css'
 import FirstFlightDetails from '../FirstFlightDetails/FirstFlightDetails';
 import FirstFireSummery from '../FirstFareSummery/FirstFareSummery';
 import FirstFarePolicy from '../FirstFarePolicy/FirstFarePolicy';
+import FirstBaggage from '../FirstBaggage/FirstBaggage';
 const Navbar = () => {
     const [toggleState, setToggleState] = useState(1);
     
@@ -67,11 +68,7 @@ const Navbar = () => {
                     <div
                         className={toggleState === 4 ? "content  active-content" : "content"}
                     >
-                        <h2 className='text-2xl text-[#105397]'>content:4</h2>
-                        <hr />
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                            LOREM 4
-                        </div>
+                        <FirstBaggage></FirstBaggage>
                     </div>
                 </div>
             </div>
