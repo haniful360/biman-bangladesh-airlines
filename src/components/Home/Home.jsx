@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import DACtoJFK from '../DACtoJFK/DACtoJFK';
 import JFKtoDAC from '../JFKtoDAC/JFKtoDAC';
-import Navbar from '../Navbar/Navbar';
 
 
 const Home = () => {
     const [toggle, setToggle] = useState(true);
+
     return (
-        <section>
+        <section className='mt-6 border-dotted bor'>
             {
                 toggle ? <DACtoJFK /> : <JFKtoDAC />
             }

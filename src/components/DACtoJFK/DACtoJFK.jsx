@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TbCurrencyTaka } from 'react-icons/tb';
-import Navbar from '../Navbar/Navbar';
+import FirstFlight from '../FirstFlight/FirstFlight';
 const DACtoJFK = () => {
+    const [show, setShow] = useState(true)
     return (
         <div>
             <div className='lg:flex md:flex justify-center'>
                 {/* biman root part */}
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4  shadow-sm border-dotted border-e-2 border-white-200 rounded-md'>
+                <div>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4  border-dotted border-e-2 border-white-200 rounded-md'>
                     <div className='relative'>
                         <img className='w-10 h-10' src="https://i.ibb.co/DGCKnXV/airlines-logo.png" alt="" />
                         <h3>Biman Bangladesh <br /> Airlines</h3>
@@ -42,13 +44,17 @@ const DACtoJFK = () => {
                         <span className='text-[#23e8b6]'>Baggage: 45 KG</span>
                     </div>
                 </div>
+                {show ? null: <FirstFlight/> }
+                </div>
+                
                 <div className='shadow rounded-md'>
                     <h2><TbCurrencyTaka></TbCurrencyTaka> 1800</h2>
                     <button className='btn bg-[#23e8b6] rounded-2xl text-white'>Book Now</button> <br />
-                    <button>Flight Details</button>
+                    <button onClick={() =>setShow(false)} >FightDetails</button>
                 </div>
             </div>
-            <Navbar/>
+            
+            
         </div>
     );
 };

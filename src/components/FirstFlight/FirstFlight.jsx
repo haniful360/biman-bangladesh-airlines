@@ -1,5 +1,7 @@
 import React, {useState } from 'react';
-import './Navbar.css'
+import './FirstFlight.css'
+import FirstFlightDetails from '../FirstFlightDetails/FirstFlightDetails';
+import FirstFireSummery from '../FirstFireSummery/FirstFireSummery';
 const Navbar = () => {
     const [toggleState, setToggleState] = useState(1);
     
@@ -10,8 +12,8 @@ const Navbar = () => {
     
 
     return (
-        <div className='max-w-4xl mx-auto'>
-            <div className="shadow">
+        <div className=' rounded-md'>
+            <div className="">
                 <div className="bloc-tabs">
                     <button
                         className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
@@ -23,7 +25,7 @@ const Navbar = () => {
                         className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
                         onClick={() => toggleTab(2)}
                     >
-                        Fire SUMMERY
+                        FIRE SUMMERY
                     </button>
                     <button
                         className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
@@ -43,21 +45,15 @@ const Navbar = () => {
                     <div
                         className={toggleState === 1 ? "content  active-content" : "content"}
                     >
-                        <h2 className='text-2xl text-[#105397]'>content:1</h2>
-                        <hr />
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                            LOREM 1
-                        </div>
+                        <FirstFlightDetails></FirstFlightDetails>
                     </div>
 
                     <div
                         className={toggleState === 2 ? "content  active-content" : "content"}
                     >
-                        <h2 className='text-2xl text-[#105397]'>content:2</h2>
-                        <hr />
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                        LOREM 2
-                        </div>
+                        
+                        <FirstFireSummery></FirstFireSummery>
+                        
                     </div>
 
                     <div
