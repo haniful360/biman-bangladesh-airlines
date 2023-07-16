@@ -1,7 +1,8 @@
 import React, {useState } from 'react';
 import './FirstFlight.css'
 import FirstFlightDetails from '../FirstFlightDetails/FirstFlightDetails';
-import FirstFireSummery from '../FirstFireSummery/FirstFireSummery';
+import FirstFireSummery from '../FirstFareSummery/FirstFareSummery';
+import FirstFarePolicy from '../FirstFarePolicy/FirstFarePolicy';
 const Navbar = () => {
     const [toggleState, setToggleState] = useState(1);
     
@@ -52,18 +53,15 @@ const Navbar = () => {
                         className={toggleState === 2 ? "content  active-content" : "content"}
                     >
                         
-                        <FirstFireSummery></FirstFireSummery>
+                       
+                       <FirstFireSummery></FirstFireSummery>
                         
                     </div>
 
                     <div
                         className={toggleState === 3 ? "content  active-content" : "content"}
                     >
-                        <h2 className='text-2xl text-[#105397]'>content:3</h2>
-                        <hr />
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                            LOREM 3
-                        </div>
+                        <FirstFarePolicy></FirstFarePolicy>
                     </div>
 
                     <div
