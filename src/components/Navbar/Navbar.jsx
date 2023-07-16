@@ -1,29 +1,84 @@
-import React from 'react';
-
+import React, {useState } from 'react';
+import './Navbar.css'
 const Navbar = () => {
+    const [toggleState, setToggleState] = useState(1);
+    
+
+    const toggleTab = (index) => {
+        setToggleState(index);
+    };
+    
+
     return (
-        <div>
-            <div className="navbar bg-base-100">
-                <div className="navbar-start">
-                    <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                        </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Item 1</a></li>
-                            <li><a>Item 3</a></li>
-                            <li><a>Item 3</a></li>
-                            <li><a>Item 3</a></li>
-                        </ul>
-                    </div>
+        <div className='max-w-4xl mx-auto'>
+            <div className="shadow">
+                <div className="bloc-tabs">
+                    <button
+                        className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
+                        onClick={() => toggleTab(1)}
+                    >
+                        Flight Details
+                    </button>
+                    <button
+                        className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
+                        onClick={() => toggleTab(2)}
+                    >
+                        Fire SUMMERY
+                    </button>
+                    <button
+                        className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
+                        onClick={() => toggleTab(3)}
+                    >
+                        FARE POLICY
+                    </button>
+                    <button
+                        className={toggleState === 4 ? "tabs active-tabs" : "tabs"}
+                        onClick={() => toggleTab(4)}
+                    >
+                       BAGGAGE
+                    </button>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal  px-1">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 3</a></li>
-                        <li><a>Item 3</a></li>
-                        <li><a>Item 3</a></li>
-                    </ul>
+
+                <div className="content-tabs">
+                    <div
+                        className={toggleState === 1 ? "content  active-content" : "content"}
+                    >
+                        <h2 className='text-2xl text-[#105397]'>content:1</h2>
+                        <hr />
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                            LOREM 1
+                        </div>
+                    </div>
+
+                    <div
+                        className={toggleState === 2 ? "content  active-content" : "content"}
+                    >
+                        <h2 className='text-2xl text-[#105397]'>content:2</h2>
+                        <hr />
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                        LOREM 2
+                        </div>
+                    </div>
+
+                    <div
+                        className={toggleState === 3 ? "content  active-content" : "content"}
+                    >
+                        <h2 className='text-2xl text-[#105397]'>content:3</h2>
+                        <hr />
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                            LOREM 3
+                        </div>
+                    </div>
+
+                    <div
+                        className={toggleState === 4 ? "content  active-content" : "content"}
+                    >
+                        <h2 className='text-2xl text-[#105397]'>content:4</h2>
+                        <hr />
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                            LOREM 4
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
