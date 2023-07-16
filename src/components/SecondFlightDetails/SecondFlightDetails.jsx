@@ -1,8 +1,8 @@
 import React from 'react';
 
-const FirstFlightDetails = () => {
+const SecondFlightDetails = () => {
     return (
-        <section className='max-w-5xl mx-auto'>
+        <section>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
                 <div>
                     <img className='w-8 h-8' src="https://i.ibb.co/DGCKnXV/airlines-logo.png" alt="" />
@@ -13,7 +13,7 @@ const FirstFlightDetails = () => {
                 </div>
                 <div>
                     <span className='text-[16px]'>Depart</span><br />
-                    <h1 className='text-[24px]' >DAC</h1>
+                    <h1 className='text-[24px]' >JFK</h1>
                     <p className='text-[18px]'>Dhaka, BD | 15.00</p>
                     <span className='text-[16px]'>Terminal, Hazrat Sha Jalal International Airport</span> <br />
                     <span className='text-[16px]'>Sun, 3rd june 2022</span>
@@ -54,7 +54,7 @@ const FirstFlightDetails = () => {
                 </div>
                 <div>
                     <span className='text-[16px]'>Depart</span><br />
-                    <h1 className='text-[24px]'>JFK</h1>
+                    <h1 className='text-[24px]'>DAC</h1>
                     <p className='text-[18px]'>Dhaka, BD | 15.00</p>
                     <span className='text-[16px]'> Terminal, Hazrat Sha Jalal International Airport</span> <br />
                     <span className='text-[16px]'>Sun, 3rd june 2022</span>
@@ -64,4 +64,4 @@ const FirstFlightDetails = () => {
     );
 };
 
-export default FirstFlightDetails;
+export default SecondFlightDetails;

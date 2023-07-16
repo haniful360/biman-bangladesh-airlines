@@ -1,10 +1,10 @@
 import React, {useState } from 'react';
-import './FirstFlight.css'
 import FirstFlightDetails from '../FirstFlightDetails/FirstFlightDetails';
 import FirstFireSummery from '../FirstFareSummery/FirstFareSummery';
 import FirstFarePolicy from '../FirstFarePolicy/FirstFarePolicy';
 import FirstBaggage from '../FirstBaggage/FirstBaggage';
-const FirstFlight = () => {
+import SecondFlightDetails from '../SecondFlightDetails/SecondFlightDetails';
+const SecondFlight = () => {
     const [toggleState, setToggleState] = useState(1);
     
 
@@ -14,14 +14,14 @@ const FirstFlight = () => {
     
 
     return (
-        <div className='p-2 pt-4 shadow rounded-md'>
-            <div>
+        <div className='p-2 shadow rounded-md pt-4'>
+            <div className="">
                 <div className="bloc-tabs text-[16px]">
                     <button
                         className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
                         onClick={() => toggleTab(1)}
                     >
-                        Flight Details
+                       FLIGHT DETAILS
                     </button>
                     <button
                         className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
@@ -47,7 +47,7 @@ const FirstFlight = () => {
                     <div
                         className={toggleState === 1 ? "content  active-content" : "content"}
                     >
-                        <FirstFlightDetails></FirstFlightDetails>
+                        <SecondFlightDetails></SecondFlightDetails>
                     </div>
 
                     <div
@@ -76,4 +76,4 @@ const FirstFlight = () => {
     );
 };
 
-export default FirstFlight;
+export default SecondFlight;
